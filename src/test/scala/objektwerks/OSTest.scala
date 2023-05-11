@@ -15,15 +15,18 @@ class OSTest extends AnyFunSuite with Matchers:
     exists(path) shouldBe true
     isDir(path) shouldBe true
 
-    write(path / "test.txt", "test")
-    read(path / "test.txt") shouldBe "test"
+    write(path / "test.txt", "text")
+    read(path / "test.txt") shouldBe "text"
 
     isFile(path / "test.txt") shouldBe true
     list(path).length shouldBe 1
     
     copy(path / "test.txt", path / "test.copy.txt")
-    read(path / "test.copy.txt") shouldBe "test"
+    read(path / "test.copy.txt") shouldBe "text"
 
     isFile(path / "test.copy.txt") shouldBe true
     list(path).length shouldBe 2
+
+    write.append(path / "test.txt", " appended text")
+    read(path / "test.txt") shouldBe "text appended text"
   }
