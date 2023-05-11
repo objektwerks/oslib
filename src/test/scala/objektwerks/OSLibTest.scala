@@ -10,8 +10,12 @@ class OSLibTest extends AnyFunSuite with Matchers:
   makeDir.all(path)
   assert( exists(path) )
 
-  test("write > read > list") {
+  test("os") {
     write.over(path / "test.txt", "test")
     read(path / "test.txt") shouldBe "test"
     list(path).length shouldBe 1
+    
+    copy(path / "test.txt", path / "test.copy.txt")
+    read(path / "test.copy.txt") shouldBe "test"
+    list(path).length shouldBe 2
   }
