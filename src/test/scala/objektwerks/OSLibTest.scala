@@ -1,7 +1,7 @@
 package objektwerks
 
 import org.scalatest.funsuite.AnyFunSuite
-import org.scalatest.matchers.must.Matchers
+import org.scalatest.matchers.should.Matchers
 
 import os.*
 
@@ -10,5 +10,5 @@ class OSLibTest extends AnyFunSuite with Matchers:
   makeDir( path )
 
   test("write > read") {
-    assert( exists(path) )
+    exists(path) shouldBe true
   }
