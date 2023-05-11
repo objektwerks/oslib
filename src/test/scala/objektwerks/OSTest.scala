@@ -5,7 +5,7 @@ import org.scalatest.matchers.should.Matchers
 
 import os.*
 
-class OSLibTest extends AnyFunSuite with Matchers:
+class OSTest extends AnyFunSuite with Matchers:
   val path = pwd / "target" / "oslib"
 
   test("os") {
