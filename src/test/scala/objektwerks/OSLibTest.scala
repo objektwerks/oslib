@@ -11,5 +11,6 @@ class OSLibTest extends AnyFunSuite with Matchers:
   assert( exists(path) )
 
   test("write > read") {
-    
+    write(path / "test.txt", "test")
+    read(path / "test.txt") shouldBe "test"
   }
