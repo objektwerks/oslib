@@ -7,10 +7,12 @@ import os.*
 
 class OSLibTest extends AnyFunSuite with Matchers:
   val path = pwd / "target" / "oslib"
-  makeDir.all(path)
-  assert( exists(path) )
 
   test("os") {
+    remove.all(path)
+    makeDir.all(path)
+    exists(path) shouldBe true
+
     write.over(path / "test.txt", "test")
     read(path / "test.txt") shouldBe "test"
     list(path).length shouldBe 1
