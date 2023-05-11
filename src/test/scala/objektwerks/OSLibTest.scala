@@ -6,8 +6,9 @@ import org.scalatest.matchers.must.Matchers
 import os.*
 
 class OSLibTest extends AnyFunSuite with Matchers:
-  val target = pwd / "target"
+  val path = pwd / "target" / "oslib"
+  makeDir( path )
 
   test("write > read") {
-    println(target)
+    assert( exists(path) )
   }
