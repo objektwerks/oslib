@@ -7,8 +7,9 @@ import os.*
 
 class OSLibTest extends AnyFunSuite with Matchers:
   val path = pwd / "target" / "oslib"
+  makeDir.all(path)
+  assert( exists(path) )
 
   test("write > read") {
-    makeDir.all( path )
-    exists(path) shouldBe true
+    
   }
