@@ -1,3 +1,8 @@
 package objektwerks
 
-@main def run(): Unit = ()
+import os.*
+
+@main def runWalk(): Unit =
+  val path = pwd / "src"
+  val dir = walk(path)
+  dir.foreach(println)
