@@ -6,6 +6,12 @@ Test
 ----
 1. sbt clean test
 
+Run
+---
+>Multiple main classes detected. Select one to run:
+1. objektwerks.runProc
+2. objektwerks.runWalk
+
 Resources
 ---------
 1. [OS-Lib Github](https://github.com/com-lihaoyi/os-lib)
