@@ -33,4 +33,7 @@ class OSTest extends AnyFunSuite with Matchers:
 
     copy.over(path, copyPath)
     isDir(copyPath) shouldBe true
+
+    proc("ls", path).call().exitCode shouldBe 0
+    proc("ls", copyPath).call().exitCode shouldBe 0
   }
