@@ -43,5 +43,7 @@ class OSTest extends AnyFunSuite with Matchers:
     lines shouldBe 2
 
     proc("ls", path).call().exitCode shouldBe 0
+    proc("ls", path).call()._1.length shouldBe 2
+    
     proc("ls", copyPath).call().exitCode shouldBe 0
   }
