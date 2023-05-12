@@ -7,6 +7,7 @@ import os.*
 
 class OSTest extends AnyFunSuite with Matchers:
   val path = pwd / "target" / "oslib"
+  val copyPath = pwd / "target" / "oslib-copy"
 
   test("os") {
     remove.all(path)
@@ -29,4 +30,6 @@ class OSTest extends AnyFunSuite with Matchers:
 
     write.append(path / "test.txt", " appended text")
     read(path / "test.txt") shouldBe "text appended text"
+
+    copy.over(path, copyPath)
   }
