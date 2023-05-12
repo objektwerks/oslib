@@ -34,6 +34,13 @@ class OSTest extends AnyFunSuite with Matchers:
     copy.over(path, copyPath)
     isDir(copyPath) shouldBe true
 
+    val lines = walk(path)
+      .filter(_.ext == "txt")
+      .map(os.read.lines)
+      .map(_.size)
+      .sum
+    lines shouldBe 2
+
     proc("ls", path).call().exitCode shouldBe 0
     proc("ls", copyPath).call().exitCode shouldBe 0
   }
