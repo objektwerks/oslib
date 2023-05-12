@@ -11,6 +11,7 @@ class OSTest extends AnyFunSuite with Matchers:
 
   test("os") {
     remove.all(path)
+    remove.all(copyPath)
     makeDir(path)
 
     exists(path) shouldBe true
