@@ -32,4 +32,5 @@ class OSTest extends AnyFunSuite with Matchers:
     read(path / "test.txt") shouldBe "text appended text"
 
     copy.over(path, copyPath)
+    isDir(copyPath) shouldBe true
   }
