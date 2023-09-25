@@ -5,11 +5,11 @@ import org.scalatest.matchers.should.Matchers
 
 import os.*
 
-class OSTest extends AnyFunSuite with Matchers:
+final class OSTest extends AnyFunSuite with Matchers:
   val path = pwd / "target" / "oslib"
   val copyPath = pwd / "target" / "oslib-copy"
 
-  test("os") {
+  test("os"):
     remove.all(path)
     remove.all(copyPath)
     makeDir(path)
@@ -47,4 +47,3 @@ class OSTest extends AnyFunSuite with Matchers:
 
     proc("ls", copyPath).call().exitCode shouldBe 0
     proc("ls", copyPath).call()._1.length shouldBe 2
-  }
