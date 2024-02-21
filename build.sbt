@@ -1,7 +1,7 @@
 name := "oslib"
 organization := "objektwerks"
 version := "0.1-SNAPSHOT"
-scalaVersion := "3.4.0"
+scalaVersion := "3.4.1-RC1"
 libraryDependencies ++= {
   Seq(
     "com.lihaoyi" %% "os-lib" % "0.9.3",
