@@ -14,6 +14,6 @@ Run
 
 Resources
 ---------
-1. [OS-Lib Github](https://github.com/com-lihaoyi/os-lib)
+1. [Os-Lib Github](https://github.com/com-lihaoyi/os-lib)
 2. [How to work with Files in Scala](http://www.lihaoyi.com/post/HowtoworkwithFilesinScala.html)
 3. [How to work with Processes in Scala](http://www.lihaoyi.com/post/HowtoworkwithSubprocessesinScala.html)
