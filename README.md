@@ -1,6 +1,6 @@
 OS-Lib
 ------
->OS-Lib feature tests using Scala 3.
+>Os-Lib feature tests using Scala 3.
 
 Test
 ----
